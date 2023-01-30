@@ -61,7 +61,7 @@ const App = () => {
     <Container className="container container--flex-and-center-all">
       <Container className="container__box rounded--box">
         <header className="container__header container--flex-and-center-y">
-          <h2>__init</h2>
+          <h2>Todolist</h2>
         </header>
 
         <main className="container__main">
@@ -73,6 +73,7 @@ const App = () => {
             >
               <TextInput
                 placeholder="enter a todo"
+                name="create-todo"
                 value={inputVal}
                 onChange={handleChange}
               />
