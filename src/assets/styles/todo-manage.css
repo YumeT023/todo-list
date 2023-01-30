@@ -1,0 +1,35 @@
+.container__main {
+  display: flex;
+  background-color: var(--grey1);
+  gap: 1px;
+
+  border-radius: 0 0 0.4rem 0.4rem;
+}
+
+.container__section {
+  width: 50%;
+  background-color: var(--dark1);
+}
+
+.container__section:nth-child(1) {
+  border-bottom-left-radius: 0.4rem;
+
+  display: grid;
+  grid-template-rows: 5rem auto;
+}
+
+.container__section:nth-child(2) {
+  border-bottom-right-radius: 0.4rem;
+}
+
+.container__form {
+  color: var(--whitesmoke1);
+  border-bottom: 1px solid var(--grey1);
+}
+
+.container__list {
+  padding: 0.3rem;
+  max-height: 98%;
+  overflow-y: scroll;
+}
+
