@@ -17,7 +17,9 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
-    "prettier": "^2.8.3"
+    "@types/react-test-renderer": "^18.0.0",
+    "prettier": "^2.8.3",
+    "react-test-renderer": "^18.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

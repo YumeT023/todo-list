@@ -61,7 +61,7 @@ const App = () => {
     <Container className="container container--flex-and-center-all">
       <Container className="container__box rounded--box">
         <header className="container__header container--flex-and-center-y">
-          <h2>Todolist</h2>
+          <h2 className="container__title">Todolist</h2>
         </header>
 
         <main className="container__main">
