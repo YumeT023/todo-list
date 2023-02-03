@@ -83,7 +83,11 @@ const App = () => {
               {state.map(
                 (item) =>
                   !item.isComplete && (
-                    <Item item={item} onChange={() => handleCheck(item.idx)} />
+                    <Item
+                      key={item.idx}
+                      item={item}
+                      onChange={() => handleCheck(item.idx)}
+                    />
                   )
               )}
             </div>
@@ -92,7 +96,7 @@ const App = () => {
           <section className="container__section">
             <div className="container__list">
               {state.map((item) => {
-                return item.isComplete && <Item item={item} />;
+                return item.isComplete && <Item key={item.idx} item={item} />;
               })}
             </div>
           </section>
