@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container render [snapshot] rendered correctly 1`] = `
+<div
+  style={
+    Object {
+      "margin": undefined,
+      "padding": undefined,
+    }
+  }
+/>
+`;
+
+exports[`Container render with additional style [snapshot] renders with the given props 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "black",
+      "color": "white",
+      "margin": undefined,
+      "padding": undefined,
+    }
+  }
+/>
+`;
+
+exports[`Container render with props [snapshot] rendered with the given props 1`] = `
+<div
+  style={
+    Object {
+      "margin": "4rem",
+      "padding": "6rem",
+    }
+  }
+/>
+`;

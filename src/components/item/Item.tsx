@@ -11,7 +11,10 @@ export const Item = ({ item, onChange = () => null }: ItemProps) => {
     `item--${item.isComplete ? "done" : "unfinished"}`;
 
   return (
-    <div className={`item ${_getStatusClass()}`}>
+    <div
+      className={`item ${_getStatusClass()}`}
+      data-testid={_getStatusClass()}
+    >
       <div className="item__content">{item.content}</div>
       <div className="item__action">
         {!item.isComplete && (

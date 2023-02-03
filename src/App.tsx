@@ -79,6 +79,8 @@ const App = () => {
               />
             </form>
 
+            <input type="checkbox" onChange={(event) => event.target.value} />
+
             <div className="container__list">
               {state.map(
                 (item) =>
