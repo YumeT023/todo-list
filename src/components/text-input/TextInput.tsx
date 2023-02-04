@@ -11,6 +11,7 @@ export const TextInput = ({ className = "", ...rest }: TextInputProps) => {
   return (
     <input
       type="text"
+      data-testid="text-input"
       className={joinClassname("text-input", className)}
       {...rest}
     />

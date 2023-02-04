@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` User input [snapshot] reacts to the change 1`] = `
+<input
+  className="text-input "
+  data-testid="text-input"
+  type="text"
+  value="test value"
+/>
+`;
+
+exports[` rendering [snapshot] renders the component 1`] = `
+<input
+  className="text-input "
+  data-testid="text-input"
+  type="text"
+/>
+`;
