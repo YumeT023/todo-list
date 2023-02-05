@@ -6,15 +6,15 @@ import { joinClassname } from "../../utils/join-classname";
 
 export type ListItemProps = {
   items: Array<TodoItem>;
-  whoseComplete: boolean;
+  whoseComplete?: boolean;
   handleCheck(idx: number): void;
 } & Record<string, any>;
 
 export const ListItem = ({
   items,
-  whoseComplete,
   handleCheck,
   className,
+  whoseComplete = true,
   ...rest
 }: ListItemProps) => {
   const renderItems = useCallback(() => {
@@ -31,7 +31,11 @@ export const ListItem = ({
   }, [items]);
 
   return (
-    <div className={joinClassname("container__list", className)} {...rest}>
+    <div
+      className={joinClassname("container__list", className)}
+      data-testid={`list-${whoseComplete ? "done" : "unfinished"}`}
+      {...rest}
+    >
       {renderItems()}
     </div>
   );

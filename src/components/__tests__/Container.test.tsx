@@ -1,5 +1,5 @@
 import { create } from "react-test-renderer";
-import { Container } from "../components";
+import { Container } from "../container";
 
 describe("Container", () => {
   describe("render", () => {

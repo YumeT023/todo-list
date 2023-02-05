@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem Items mapping [snapshot] map items according to \`whoseComplete\` props 1`] = `
+<div
+  className="container__list "
+  data-testid="list-unfinished"
+>
+  <div
+    className="item item--unfinished"
+    data-testid="item--unfinished"
+  >
+    <div
+      className="item__content"
+    >
+      content__1
+    </div>
+    <div
+      className="item__action"
+    >
+      <input
+        name="item-status"
+        onChange={[Function]}
+        type="checkbox"
+      />
+    </div>
+  </div>
+  <div
+    className="item item--unfinished"
+    data-testid="item--unfinished"
+  >
+    <div
+      className="item__content"
+    >
+      content__3
+    </div>
+    <div
+      className="item__action"
+    >
+      <input
+        name="item-status"
+        onChange={[Function]}
+        type="checkbox"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ListItem rendering [snapshot] rendered correctly 1`] = `
+<div
+  className="container__list "
+  data-testid="list-done"
+/>
+`;
