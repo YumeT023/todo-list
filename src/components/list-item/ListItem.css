@@ -3,3 +3,7 @@
   max-height: 27.8rem;
   overflow-y: scroll;
 }
+
+.list-item--full {
+  max-height: 32.5rem;
+}

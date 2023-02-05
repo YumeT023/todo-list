@@ -2,17 +2,20 @@ import React, { useCallback } from "react";
 import { Item } from "../item";
 import { TodoItem } from "../../models/Todo.model";
 import "./ListItem.css";
+import { joinClassname } from "../../utils/join-classname";
 
 export type ListItemProps = {
   items: Array<TodoItem>;
   whoseComplete: boolean;
   handleCheck(idx: number): void;
-};
+} & Record<string, any>;
 
 export const ListItem = ({
   items,
   whoseComplete,
   handleCheck,
+  className,
+  ...rest
 }: ListItemProps) => {
   const renderItems = useCallback(() => {
     return items.map(
@@ -27,5 +30,9 @@ export const ListItem = ({
     );
   }, [items]);
 
-  return <div className="container__list">{renderItems()}</div>;
+  return (
+    <div className={joinClassname("container__list", className)} {...rest}>
+      {renderItems()}
+    </div>
+  );
 };

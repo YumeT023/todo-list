@@ -87,7 +87,12 @@ const App = () => {
           </section>
 
           <section className="container__section">
-            <ListItem items={state} handleCheck={handleCheck} whoseComplete />
+            <ListItem
+              items={state}
+              handleCheck={handleCheck}
+              whoseComplete
+              className="list-item--full"
+            />
           </section>
         </main>
       </Container>
