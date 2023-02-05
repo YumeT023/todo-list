@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { TodoList } from "./models/Todo.model";
-import { Container, Item, TextInput } from "./components";
+import { Container, ListItem, TextInput } from "./components";
 import { mapToProp } from "./utils/map-to-prop";
 import "./App.css";
 
@@ -79,28 +79,15 @@ const App = () => {
               />
             </form>
 
-            <input type="checkbox" onChange={(event) => event.target.value} />
-
-            <div className="container__list">
-              {state.map(
-                (item) =>
-                  !item.isComplete && (
-                    <Item
-                      key={item.idx}
-                      item={item}
-                      onChange={() => handleCheck(item.idx)}
-                    />
-                  )
-              )}
-            </div>
+            <ListItem
+              items={state}
+              handleCheck={handleCheck}
+              whoseComplete={false}
+            />
           </section>
 
           <section className="container__section">
-            <div className="container__list">
-              {state.map((item) => {
-                return item.isComplete && <Item key={item.idx} item={item} />;
-              })}
-            </div>
+            <ListItem items={state} handleCheck={handleCheck} whoseComplete />
           </section>
         </main>
       </Container>

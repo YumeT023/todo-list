@@ -28,13 +28,6 @@
 }
 
 
-.container__list {
-  padding: 0.3rem;
-  max-height: 27.8rem;
-  overflow-y: scroll;
-}
-
-
 .contain {
   padding: 0.3rem;
   max-height: 27.8rem;
