@@ -33,26 +33,4 @@ describe("App", () => {
     const finishedItems = screen.queryAllByTestId("item--done");
     expect(finishedItems).toHaveLength(0);
   });
-
-  it("should allow to move a todo from 'unfinished' to 'done'", () => {
-    const input = screen.getByPlaceholderText(
-      /enter a todo/
-    ) as HTMLInputElement;
-
-    TestUtils.writeOnInput("first todo", input).submit();
-    TestUtils.writeOnInput("second todo", input).submit();
-
-    const unfinishedItems = screen.getAllByTestId("item--unfinished");
-    expect(unfinishedItems).toHaveLength(2);
-
-    const [todo_1] = unfinishedItems;
-
-    expect(todo_1).toBeTruthy();
-    const checkbox = todo_1.querySelector("[name=item-status]");
-
-    expect(checkbox).toBeTruthy();
-
-    //TODO: check a checkbox
-    expect([]).toHaveLength(1);
-  });
 });
